@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="">
 <head>
 
   <!-- Basic Page Needs
@@ -30,71 +30,72 @@
   <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
 
 </head>
-<body ng-app="myApp">
+<body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <div class="row">
+    <header>
+      <div class="row">
 
         <div class="three columns">
-          <img src="images/mad-lib-happy-face.png">
+          <img src="images/mad-lib-happy-face.png" id="face">
         </div>
 
         <div class="nine columns">
-          <img src="images/ng-mad-libs-logo.png">
+          <img src="images/ng-mad-libs-logo.png" id="logo">
         </div>
 
-    </div>
-
-    <h3>Provide the following words:</h3>
-
-    <div class="row">
-      <div class="two columns">
-        <input class="u-full-width" type="string" placeholder="Female Name" id="firstInput">
       </div>
-      <div class="two columns">
-        <input class="u-full-width" type="string" placeholder="Job Title" id="secondInput">
-      </div>
-      <div class="two columns">
-        <input class="u-full-width" type="string" placeholder="Tedious Task" id="thirdInput">
-      </div>
-    </div>
+    </header>
+    <h1>Provide the following words:</h1>
 
     <div class="row">
-      <div class="two columns">
-        <input class="u-full-width" type="string" placeholder="Dirty Task" id="fourthInput">
+      <div class="four columns">
+        <input class="u-full-width" type="text" ng-model="female_name" placeholder="Female Name" id="firstInput">
       </div>
-      <div class="two columns">
-        <input class="u-full-width" type="string" placeholder="Celebrity" id="fifthInput">
+      <div class="four columns">
+        <input class="u-full-width" type="text" ng-model="job_title" placeholder="Job Title" id="secondInput">
       </div>
-      <div class="two columns">
-        <input class="u-full-width" type="string" placeholder="Useless Skill" id="sixthInput">
+      <div class="four columns">
+        <input class="u-full-width" type="text" ng-model="tedious_task" placeholder="Tedious Task" id="thirdInput">
       </div>
     </div>
 
     <div class="row">
-      <div class="two columns">
-        <input class="u-full-width" type="string" placeholder="Adjective" id="seventhInput">
+      <div class="four columns">
+        <input class="u-full-width" type="text" ng-model="dirty_task" placeholder="Dirty Task" id="fourthInput">
       </div>
-      <div class="two columns">
-        <input class="u-full-width" type="string" placeholder="Obnoxious Celebrity" id="eighthInput">
+      <div class="four columns">
+        <input class="u-full-width" type="text" ng-model="celebrity" placeholder="Celebrity" id="fifthInput" />
       </div>
-      <div class="two columns">
-        <input class="u-full-width" type="string" placeholder="Huge Number" id="ninthInput">
+      <div class="four columns">
+        <input class="u-full-width" type="text" ng-model="useless_skill" placeholder="Useless Skill" id="sixthInput">
       </div>
     </div>
 
-    <div>
-      <p>{{female name}} was a {{job title}} who loved technology. Although she loved parts of her job, she absolutely hated  {{tedious task}} and {{dirty task}}. So, {{female_name}} met with her life mentor {{celebrity}} who told her to learn how to {{useless skill}} with Thinkful. Thinkful didn't offer a course on {{useless skill}} so she studied programming instead.
+    <div class="row">
+      <div class="four columns">
+        <input class="u-full-width" type="text" ng-model="adjective" placeholder="Adjective" id="seventhInput">
+      </div>
+      <div class="four columns">
+        <input class="u-full-width" type="text" ng-model="obnoxious_celebrity" placeholder="Obnoxious Celebrity" id="eighthInput">
+      </div>
+      <div class="four columns">
+        <input class="u-full-width" type="text" ng-model="huge_number" placeholder="Huge Number" id="ninthInput">
+      </div>
+    </div>
+
+    <div id='output'>
+      <p><strong>{{female_name}}</strong> was a <strong>{{job_title}}</strong> who loved technology. Although she loved parts of her job, she absolutely hated <strong>{{tedious_task}}</strong> and <strong>{{dirty_task}}</strong>. So, <strong>{{female_name}}</strong> met with her life mentor <strong>{{ celebrity }}</strong> who told her to learn how to <strong>{{useless_skill}}</strong> with Thinkful. Thinkful didn't offer a course on <strong>{{useless_skill}}</strong> so she studied programming instead.
       <br>
       <br>
-      What a great decision! With her new skills, {{female name}} built a(n) {{adjective}} robot named {{obnoxiuous celebrity}} that not only loved {{dirty task}} but did it {{huge number}} faster.</p>
+      What a great decision! With her new skills, <strong>{{female_name}}</strong> built a(n) <strong>{{adjective}}</strong> robot named <strong>{{obnoxious_celebrity}}</strong> that not only loved <strong>{{dirty_task}}</strong> but did it <strong>{{huge_number}}</strong> faster.</p>
     </div>
   </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="script.js"></script>
+<!--   <script src="script.js"></script> -->
 </body>
 </html>

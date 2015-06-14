@@ -1,0 +1,29 @@
+#face {
+  margin-top: 40px;
+
+}
+
+#logo {
+  margin-top: 85px;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.row {
+  text-align: center;
+}
+
+img {
+  margin: auto;
+}
+
+input {
+  text-align: center;
+}
+
+#output {
+  margin-top: 20px;
+}
