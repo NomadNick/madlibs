@@ -7,8 +7,17 @@
   margin-top: 85px;
 }
 
+button {
+  background-color: lightblue;
+  width: 100px;
+  text-align: center;
+  vertical-align: center;
+  padding: 2px 12px;
+  margin-bottom: 25px;
+}
+
 h1 {
-  font-size: 2em;
+  font-size: 1em;
   text-align: center;
 }
 

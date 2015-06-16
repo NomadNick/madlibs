@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="">
+<html lang="en" ng-app="demo" ng-controller="MyCtrl">
 <head>
 
   <!-- Basic Page Needs
@@ -15,7 +15,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -48,7 +48,18 @@
 
       </div>
     </header>
-    <h1>Provide the following words:</h1>
+    <h1>Please select gender:</h1>
+    <div class="row">
+      <div class="twelve columns">
+        <button class="gender" ng-click="male()">
+          Male
+        </button>
+        <button class="gender" ng-click="female()">
+          Female
+        </button>
+      </div>
+    </div>
+    <h1>Then, provide the following words:</h1>
 
     <div class="row">
       <div class="four columns">
@@ -87,15 +98,15 @@
     </div>
 
     <div id='output'>
-      <p><strong>{{female_name}}</strong> was a <strong>{{job_title}}</strong> who loved technology. Although she loved parts of her job, she absolutely hated <strong>{{tedious_task}}</strong> and <strong>{{dirty_task}}</strong>. So, <strong>{{female_name}}</strong> met with her life mentor <strong>{{ celebrity }}</strong> who told her to learn how to <strong>{{useless_skill}}</strong> with Thinkful. Thinkful didn't offer a course on <strong>{{useless_skill}}</strong> so she studied programming instead.
+      <p><strong>{{female_name}}</strong> was a <strong>{{job_title}}</strong> who loved technology. Although {{heshe}} loved parts of {{himher}} job, she absolutely hated <strong>{{tedious_task}}</strong> and <strong>{{dirty_task}}</strong>. So, <strong>{{female_name}}</strong> met with her life mentor <strong>{{ celebrity }}</strong> who told her to learn how to <strong>{{useless_skill}}</strong> with Thinkful. Thinkful didn't offer a course on <strong>{{useless_skill}}</strong> so she studied programming instead.
       <br>
       <br>
-      What a great decision! With her new skills, <strong>{{female_name}}</strong> built a(n) <strong>{{adjective}}</strong> robot named <strong>{{obnoxious_celebrity}}</strong> that not only loved <strong>{{dirty_task}}</strong> but did it <strong>{{huge_number}}</strong> faster.</p>
+      What a great decision! With {{himher}} new skills, <strong>{{female_name}}</strong> built a(n) <strong>{{adjective}}</strong> robot named <strong>{{obnoxious_celebrity}}</strong> that not only loved <strong>{{dirty_task}}</strong> but did it <strong>{{huge_number}}</strong> faster.</p>
     </div>
   </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!--   <script src="script.js"></script> -->
+  <script src="js/myApp.js"></script>
 </body>
 </html>
