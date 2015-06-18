@@ -32,6 +32,8 @@
 </head>
 <body>
 
+<p>{{ female_name }}</p>
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
@@ -48,60 +50,70 @@
 
       </div>
     </header>
-    <h1>Please select gender:</h1>
-    <div class="row">
-      <div class="twelve columns">
-        <button class="gender" ng-click="male()">
-          Male
-        </button>
-        <button class="gender" ng-click="female()">
-          Female
-        </button>
-      </div>
-    </div>
-    <h1>Then, provide the following words:</h1>
 
-    <div class="row">
-      <div class="four columns">
-        <input class="u-full-width" type="text" ng-model="female_name" placeholder="Female Name" id="firstInput">
+    <div class="inputView" ng-show="showInput">
+      <h1>Please select gender:</h1>
+      <div class="row">
+        <div class="twelve columns">
+          <button class="gender" ng-click="male()">
+            Male
+          </button>
+          <button class="gender" ng-click="female()">
+            Female
+          </button>
+        </div>
       </div>
-      <div class="four columns">
-        <input class="u-full-width" type="text" ng-model="job_title" placeholder="Job Title" id="secondInput">
+      <h1>Then, provide the following words:</h1>
+
+      <div class="row">
+        <div class="four columns">
+          <input class="u-full-width" type="text" ng-model="female_name" placeholder="Female Name" id="firstInput">
+        </div>
+        <div class="four columns">
+          <input class="u-full-width" type="text" ng-model="job_title" placeholder="Job Title" id="secondInput">
+        </div>
+        <div class="four columns">
+          <input class="u-full-width" type="text" ng-model="tedious_task" placeholder="Tedious Task" id="thirdInput">
+        </div>
       </div>
-      <div class="four columns">
-        <input class="u-full-width" type="text" ng-model="tedious_task" placeholder="Tedious Task" id="thirdInput">
+
+      <div class="row">
+        <div class="four columns">
+          <input class="u-full-width" type="text" ng-model="dirty_task" placeholder="Dirty Task" id="fourthInput">
+        </div>
+        <div class="four columns">
+          <input class="u-full-width" type="text" ng-model="celebrity" placeholder="Celebrity" id="fifthInput" />
+        </div>
+        <div class="four columns">
+          <input class="u-full-width" type="text" ng-model="useless_skill" placeholder="Useless Skill" id="sixthInput">
+        </div>
       </div>
+
+      <div class="row">
+        <div class="four columns">
+          <input class="u-full-width" type="text" ng-model="adjective" placeholder="Adjective" id="seventhInput">
+        </div>
+        <div class="four columns">
+          <input class="u-full-width" type="text" ng-model="obnoxious_celebrity" placeholder="Obnoxious Celebrity" id="eighthInput">
+        </div>
+        <div class="four columns">
+          <input class="u-full-width" type="text" ng-model="huge_number" placeholder="Huge Number" id="ninthInput">
+        </div>
+      </div>
+      <button id="generate" ng-click="showOutputParagraph()">
+            Generate My Mad Lib
+      </button>
     </div>
 
-    <div class="row">
-      <div class="four columns">
-        <input class="u-full-width" type="text" ng-model="dirty_task" placeholder="Dirty Task" id="fourthInput">
-      </div>
-      <div class="four columns">
-        <input class="u-full-width" type="text" ng-model="celebrity" placeholder="Celebrity" id="fifthInput" />
-      </div>
-      <div class="four columns">
-        <input class="u-full-width" type="text" ng-model="useless_skill" placeholder="Useless Skill" id="sixthInput">
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="four columns">
-        <input class="u-full-width" type="text" ng-model="adjective" placeholder="Adjective" id="seventhInput">
-      </div>
-      <div class="four columns">
-        <input class="u-full-width" type="text" ng-model="obnoxious_celebrity" placeholder="Obnoxious Celebrity" id="eighthInput">
-      </div>
-      <div class="four columns">
-        <input class="u-full-width" type="text" ng-model="huge_number" placeholder="Huge Number" id="ninthInput">
-      </div>
-    </div>
-
-    <div id='output'>
-      <p><strong>{{female_name}}</strong> was a <strong>{{job_title}}</strong> who loved technology. Although {{heshe}} loved parts of {{himher}} job, she absolutely hated <strong>{{tedious_task}}</strong> and <strong>{{dirty_task}}</strong>. So, <strong>{{female_name}}</strong> met with her life mentor <strong>{{ celebrity }}</strong> who told her to learn how to <strong>{{useless_skill}}</strong> with Thinkful. Thinkful didn't offer a course on <strong>{{useless_skill}}</strong> so she studied programming instead.
+    <div class="outputView" ng-show="showOutput">
+      <p><span class="line">{{female_name}}</span> was a <span class="line">{{job_title}}</span> who loved technology. Although {{heshe}} loved parts of {{himher}} job, she absolutely hated <span class="line">{{tedious_task}}</span> and <span class="line">{{dirty_task}}</span>. So, <span class="line">{{female_name}}</span> met with her life mentor <span class="line">{{celebrity}}</span> who told her to learn how to <span class="line">{{useless_skill}}</span> with Thinkful. Thinkful didn't offer a course on <span class="line">{{useless_skill}}</span> so she studied programming instead.
       <br>
       <br>
-      What a great decision! With {{himher}} new skills, <strong>{{female_name}}</strong> built a(n) <strong>{{adjective}}</strong> robot named <strong>{{obnoxious_celebrity}}</strong> that not only loved <strong>{{dirty_task}}</strong> but did it <strong>{{huge_number}}</strong> faster.</p>
+      What a great decision! With {{himher}} new skills, <span class="line">{{female_name}}</span> built a(n) <span class="line">{{adjective}}</span> robot named <span class="line">{{obnoxious_celebrity}}</span> that not only loved <span class="line">{{dirty_task}}</span> but did it <span class="line">{{huge_number}}</span> times faster.</p>
+      <button id="reset" ng-click="showInputs()">
+            Start Over
+      </button>
     </div>
   </div>
 

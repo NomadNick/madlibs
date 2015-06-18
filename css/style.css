@@ -8,12 +8,13 @@
 }
 
 button {
-  background-color: lightblue;
+  background-color: #D0484A;
   width: 100px;
   text-align: center;
   vertical-align: center;
   padding: 2px 12px;
   margin-bottom: 25px;
+  color: white;
 }
 
 h1 {
@@ -33,6 +34,25 @@ input {
   text-align: center;
 }
 
-#output {
-  margin-top: 20px;
+#generate, #reset {
+  background-color: #D0484A;
+  float: right;
+  color: white;
+  margin-top: 10px;
+}
+
+#generate {
+  width: 200px;
+}
+
+.outputView {
+  margin-top: 80px;
+}
+
+.line {
+  display: inline-block;
+  border-bottom: 2px solid black;
+  min-width: 150px;
+  text-align: center;
+  font-weight: bold;
 }
