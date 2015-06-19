@@ -29,9 +29,14 @@ thisApp.controller('MyCtrl', function($scope) {
     $scope.heshe = 'she';
   };
 
-  $scope.showOutputParagraph = function() {
-    $scope.showOutput = true;
-    $scope.showInput = false;
+  $scope.submitForm = function() {
+    if ($scope.madInputs.$valid) {
+      $scope.showOutput = true;
+      $scope.showInput = false;
+    } else {
+      $scope.showInputs();
+    }
+
   }
 
   $scope.showInputs = function() {

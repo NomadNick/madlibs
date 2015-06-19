@@ -34,6 +34,10 @@ input {
   text-align: center;
 }
 
+.css-form input.ng-valid {
+    background-color: #78FA89;
+  }
+
 #generate, #reset {
   background-color: #D0484A;
   float: right;

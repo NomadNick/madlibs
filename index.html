@@ -32,8 +32,6 @@
 </head>
 <body>
 
-<p>{{ female_name }}</p>
-
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
@@ -65,42 +63,44 @@
       </div>
       <h1>Then, provide the following words:</h1>
 
-      <div class="row">
-        <div class="four columns">
-          <input class="u-full-width" type="text" ng-model="female_name" placeholder="Female Name" id="firstInput">
+      <form name="madInputs" class="css-form" novalidate ng-submit="submitForm()">
+        <div class="row">
+          <div class="four columns">
+            <input class="u-full-width" type="text" ng-model="female_name" placeholder="Female Name" id="firstInput" ng-minlength=2 ng-pattern="string" required>
+          </div>
+          <div class="four columns">
+            <input class="u-full-width" type="text" ng-model="job_title" placeholder="Job Title" id="secondInput" ng-minlength=2 required>
+          </div>
+          <div class="four columns">
+            <input class="u-full-width" type="text" ng-model="tedious_task" placeholder="Tedious Task" id="thirdInput" ng-minlength=2 required>
+          </div>
         </div>
-        <div class="four columns">
-          <input class="u-full-width" type="text" ng-model="job_title" placeholder="Job Title" id="secondInput">
-        </div>
-        <div class="four columns">
-          <input class="u-full-width" type="text" ng-model="tedious_task" placeholder="Tedious Task" id="thirdInput">
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="four columns">
-          <input class="u-full-width" type="text" ng-model="dirty_task" placeholder="Dirty Task" id="fourthInput">
+        <div class="row">
+          <div class="four columns">
+            <input class="u-full-width" type="text" ng-model="dirty_task" placeholder="Dirty Task" id="fourthInput" ng-minlength=2 required>
+          </div>
+          <div class="four columns">
+            <input class="u-full-width" type="text" ng-model="celebrity" placeholder="Celebrity" id="fifthInput" ng-minlength=2 required>
+          </div>
+          <div class="four columns">
+            <input class="u-full-width" type="text" ng-model="useless_skill" placeholder="Useless Skill" id="sixthInput" ng-minlength=2 required>
+          </div>
         </div>
-        <div class="four columns">
-          <input class="u-full-width" type="text" ng-model="celebrity" placeholder="Celebrity" id="fifthInput" />
-        </div>
-        <div class="four columns">
-          <input class="u-full-width" type="text" ng-model="useless_skill" placeholder="Useless Skill" id="sixthInput">
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="four columns">
-          <input class="u-full-width" type="text" ng-model="adjective" placeholder="Adjective" id="seventhInput">
+        <div class="row">
+          <div class="four columns">
+            <input class="u-full-width" type="text" ng-model="adjective" placeholder="Adjective" id="seventhInput" ng-minlength=2 required>
+          </div>
+          <div class="four columns">
+            <input class="u-full-width" type="text" ng-model="obnoxious_celebrity" placeholder="Obnoxious Celebrity" id="eighthInput" ng-minlength=2 required>
+          </div>
+          <div class="four columns">
+            <input class="u-full-width" type="number" ng-model="huge_number" placeholder="Huge Number" id="ninthInput" ng-minlength=6 ng-pattern="/^(0|[1-9][0-9]*)$/" required>
+          </div>
         </div>
-        <div class="four columns">
-          <input class="u-full-width" type="text" ng-model="obnoxious_celebrity" placeholder="Obnoxious Celebrity" id="eighthInput">
-        </div>
-        <div class="four columns">
-          <input class="u-full-width" type="text" ng-model="huge_number" placeholder="Huge Number" id="ninthInput">
-        </div>
-      </div>
-      <button id="generate" ng-click="showOutputParagraph()">
+      </form>
+      <button id="generate" ng-click="submitForm()">
             Generate My Mad Lib
       </button>
     </div>
